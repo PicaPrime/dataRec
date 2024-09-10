@@ -12,7 +12,8 @@
 		"D:/dataRec/images/zondicons_refresh.png",
 		"D:/dataRec/images/ep_filter.png",
 		"D:/dataRec/images/shinygleam data recovery logo.jpg",
-		"D:/dataRec/images/magnifying glass.png"
+		"D:/dataRec/images/magnifying glass.png",
+		"D:/dataRec/images/close.png"
 	],
 	"LOCK_FILE" : "D:/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/dataRec_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,

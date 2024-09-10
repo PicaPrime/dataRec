@@ -193,7 +193,7 @@ build dataRec_autogen/timestamp dataRec_autogen/mocs_compilation.cpp | ${cmake_n
 #############################################
 # Custom command for dataRec_autogen\EWIEGA46WW\qrc_resources.cpp
 
-build dataRec_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}dataRec_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND D$:/dataRec/resources.qrc CMakeFiles/dataRec_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json D$:/dataRec/images/zondicons_refresh.png D$:/dataRec/images/ep_filter.png D$:/dataRec/images/shinygleam$ data$ recovery$ logo.jpg D$:/dataRec/images/magnifying$ glass.png C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe || dataRec_autogen dataRec_autogen_timestamp_deps
+build dataRec_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}dataRec_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND D$:/dataRec/resources.qrc CMakeFiles/dataRec_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json D$:/dataRec/images/zondicons_refresh.png D$:/dataRec/images/ep_filter.png D$:/dataRec/images/shinygleam$ data$ recovery$ logo.jpg D$:/dataRec/images/magnifying$ glass.png D$:/dataRec/images/close.png C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe || dataRec_autogen dataRec_autogen_timestamp_deps
   COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\dataRec\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc D:/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/dataRec_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for resources.qrc
   restat = 1

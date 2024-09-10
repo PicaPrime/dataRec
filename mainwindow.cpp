@@ -9,17 +9,38 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap pix(":/images/shinygleam data recovery logo.jpg");
-    int w = ui->label_2->width();
-    int h = ui->label_2->height();
 
-    ui->label_2->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
+    QIcon icon(":/images/shinygleam data recovery logo.jpg");
+    setWindowIcon(icon);
+    setWindowTitle("SHINY GLEAM DataRecovery");
 
-    QPixmap pix(":/images/magnifying glass.png");
+    QPixmap pixmap1(":/images/shinygleam data recovery logo.jpg");
+    // int w = ui->label_2->width();
+    // int h = ui->label_2->height();
+    int w = 50;
+    int h = 50;
+
+    ui->label_2->setPixmap(pixmap1.scaled(w, h, Qt::KeepAspectRatio));
+
+
+
+    QPixmap pixmap2(":/images/magnifying glass.png");
     w = ui->label_scan->width();
     h = ui->label_scan->height();
 
-    ui->label_scan->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
+    ui->label_scan->setPixmap(pixmap2.scaled(w, h, Qt::KeepAspectRatio));
+
+    QPixmap pixmap3(":/images/close.png");
+    w = ui->label_close->width();
+    h = ui->label_close->height();
+
+    ui->label_close->setPixmap(pixmap3.scaled(w, h, Qt::KeepAspectRatio));
+
+    QPixmap pixmap4(":/images/zondicons_refresh.png");
+    w = ui->label_rescan->width();
+    h = ui->label_rescan->height();
+
+    ui->label_rescan->setPixmap(pixmap4.scaled(w, h, Qt::KeepAspectRatio));
 }
 
 MainWindow::~MainWindow()
@@ -34,6 +55,7 @@ void MainWindow::on_pushButton_3_clicked()
         // User selected a folder
         // Use folderPath as needed
         qDebug() << "Selected folder:" << folderPath;
+        ui->textEdit_selectedFolder->setText(folderPath);
     } else {
         // User cancelled the dialog
         qDebug() << "no folder selected";
@@ -54,6 +76,7 @@ void MainWindow::on_pushButton_4_clicked()
         // User selected a folder
         // Use folderPath as needed
         qDebug() << "Selected folder:" << folderPath;
+        ui->textEdit_destinationFolder->setText(folderPath);
     } else {
         // User cancelled the dialog
         qDebug() << "no folder selected";
@@ -64,5 +87,23 @@ void MainWindow::on_pushButton_4_clicked()
 void MainWindow::on_pushButton_5_clicked()
 {
     QApplication::quit();
+}
+
+
+void MainWindow::on_pushButton_scanSelected_clicked()
+{
+    QString sourcePath = ui->textEdit_destinationFolder->toPlainText();
+    QString destinationPath = ui->textEdit_destinationFolder->toPlainText();
+
+    if(sourcePath.isEmpty() || destinationPath.isEmpty()){
+        ui->label_signal->setText("Path not Specified");
+    }
+    else{
+        ui->label_signal->setText("Scaning please wait...");
+
+        //implement ur data recovery logic here
+
+
+    }
 }
 

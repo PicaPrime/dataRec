@@ -3,6 +3,7 @@
 #include <QFileDialog>
 #include <QString>
 #include<QPixmap>
+#include<QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -105,5 +106,11 @@ void MainWindow::on_pushButton_scanSelected_clicked()
 
 
     }
+}
+
+
+void MainWindow::on_label_2_linkActivated(const QString &link)
+{
+    QDesktopServices::openUrl(QUrl("https://www.shinygleam.com/", QUrl::TolerantMode));
 }
 

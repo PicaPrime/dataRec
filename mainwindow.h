@@ -28,6 +28,8 @@ private slots:
 
     void on_pushButton_scanSelected_clicked();
 
+    void on_label_2_linkActivated(const QString &link);
+
 private:
     Ui::MainWindow *ui;
 };

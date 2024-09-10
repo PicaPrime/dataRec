@@ -1,0 +1,4 @@
+#ifndef MP4RECOVERY_H
+#define MP4RECOVERY_H
+
+#endif // MP4RECOVERY_H

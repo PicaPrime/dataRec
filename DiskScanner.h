@@ -1,0 +1,4 @@
+#ifndef DISKSCANNER_H
+#define DISKSCANNER_H
+
+#endif // DISKSCANNER_H

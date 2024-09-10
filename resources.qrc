@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/ep_filter.png</file>
+        <file>images/magnifying glass.png</file>
+        <file>images/zondicons_refresh.png</file>
+        <file>images/shinygleam data recovery logo.jpg</file>
+    </qresource>
+</RCC>

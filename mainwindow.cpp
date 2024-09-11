@@ -5,6 +5,11 @@
 #include<QPixmap>
 #include<QDesktopServices>
 
+// #include "ui_MainWindow.h"
+#include "DiskScanner.h"
+#include "MP4Recovery.h"
+#include <QMessageBox>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -93,19 +98,57 @@ void MainWindow::on_pushButton_5_clicked()
 
 void MainWindow::on_pushButton_scanSelected_clicked()
 {
-    QString sourcePath = ui->textEdit_destinationFolder->toPlainText();
-    QString destinationPath = ui->textEdit_destinationFolder->toPlainText();
+    // QString sourcePath = ui->textEdit_selectedFolder->toPlainText();
+    // QString destinationPath = ui->textEdit_destinationFolder->toPlainText();
 
-    if(sourcePath.isEmpty() || destinationPath.isEmpty()){
-        ui->label_signal->setText("Path not Specified");
+    // if(sourcePath.isEmpty() || destinationPath.isEmpty()){
+    //     ui->label_signal->setText("Path not Specified");
+    // }
+    // else{
+    //     ui->label_signal->setText("Scaning please wait...");
+
+    //     //implement ur data recovery logic here
+
+
+    // }
+
+    // code from shamim bhai -------------------------------------------------------------------------------
+
+    // QString drive = ui->drivePathEdit->text();
+    QString drive = ui->textEdit_selectedFolder->toPlainText();
+    // QString outputDir = ui->outputDirEdit->text();
+    QString outputDir = ui->textEdit_destinationFolder->toPlainText();
+
+    if (drive.isEmpty() || outputDir.isEmpty()) {
+        QMessageBox::warning(this, "Input Error", "Please provide both drive and output directory.");
+        return;
     }
-    else{
-        ui->label_signal->setText("Scaning please wait...");
 
-        //implement ur data recovery logic here
+    // Disable the button before starting the recovery process
+    ui->pushButton_scanSelected->setEnabled(false);
 
-
+    DiskScanner scanner(drive.toStdString());
+    if (!scanner.openDrive()) {
+        QMessageBox::critical(this, "Error", "Failed to open drive.");
+        ui->pushButton_scanSelected->setEnabled(true); // Re-enable the button on failure
+        return;
     }
+
+    QMessageBox::information(this, "Drive Open", "Successfully Open Drive for recovery.");
+
+    MP4Recovery recovery(outputDir.toStdString());
+
+    QMessageBox::information(this, "Recovery Start", "Successfully Start For recovery.");
+
+    recovery.recoverMP4(scanner);
+
+    scanner.closeDrive();
+
+    // Re-enable the button after the recovery process completes
+    ui->pushButton_scanSelected->setEnabled(true);
+
+    QMessageBox::information(this, "Recovery Completed", "MP4 recovery process completed.");
+
 }
 
 

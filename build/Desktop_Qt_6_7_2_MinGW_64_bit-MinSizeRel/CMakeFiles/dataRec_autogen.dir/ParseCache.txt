@@ -355,3 +355,7 @@ D:/dataRec/mainwindow.h
 D:/dataRec/main.cpp
 D:/dataRec/mainwindow.cpp
  uic:./ui_mainwindow.h
+D:/dataRec/DiskScanner.h
+D:/dataRec/MP4Recovery.h
+D:/dataRec/DiskScanner.cpp
+D:/dataRec/MP4Recovery.cpp

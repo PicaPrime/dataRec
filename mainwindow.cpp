@@ -112,12 +112,17 @@ void MainWindow::on_pushButton_scanSelected_clicked()
 
     // }
 
-    // code from shamim bhai -------------------------------------------------------------------------------
+    // ---------------------------------------- code from shamim bhai -------------------------------------------------------------------------------
 
     // QString drive = ui->drivePathEdit->text();
     QString drive = ui->textEdit_selectedFolder->toPlainText();
+    drive = "\\\\.\\"+drive;
+    // drive.chop(1);
+    qDebug() << "updated path: "<<drive<<" length: "<<drive.size();
+    // drive = drive[drive.length()]
     // QString outputDir = ui->outputDirEdit->text();
     QString outputDir = ui->textEdit_destinationFolder->toPlainText();
+    outputDir = "\\\\.\\"+outputDir;
 
     if (drive.isEmpty() || outputDir.isEmpty()) {
         QMessageBox::warning(this, "Input Error", "Please provide both drive and output directory.");

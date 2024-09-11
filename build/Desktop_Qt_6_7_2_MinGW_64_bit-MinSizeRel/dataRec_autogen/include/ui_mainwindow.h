@@ -30,13 +30,13 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_7;
     QVBoxLayout *verticalLayout_8;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
+    QLabel *label_5;
     QSpacerItem *horizontalSpacer_3;
-    QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
     QLabel *label_scan;
@@ -44,10 +44,11 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLabel *label_rescan;
     QPushButton *pushButton_2;
-    QSpacerItem *horizontalSpacer;
+    QSpacerItem *horizontalSpacer_2;
     QVBoxLayout *verticalLayout_3;
     QLabel *label_close;
     QPushButton *pushButton_5;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *verticalLayout_5;
     QLabel *label;
@@ -62,6 +63,7 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_signal;
     QSpacerItem *horizontalSpacer_4;
+    QLabel *label_selectedScanImg;
     QPushButton *pushButton_scanSelected;
     QMenuBar *menubar;
     QMenu *menuFile;
@@ -75,42 +77,53 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(640, 480);
+        MainWindow->setStyleSheet(QString::fromUtf8("\n"
+"background-color: rgb(212, 241, 244);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(50, 20, 541, 401));
-        verticalLayout_7 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(50, 20, 541, 401));
+        verticalLayout_7 = new QVBoxLayout(layoutWidget);
         verticalLayout_7->setObjectName("verticalLayout_7");
         verticalLayout_7->setContentsMargins(0, 0, 0, 0);
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setObjectName("verticalLayout_8");
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName("label_2");
 
         horizontalLayout_2->addWidget(label_2);
+
+        label_5 = new QLabel(layoutWidget);
+        label_5->setObjectName("label_5");
+        label_5->setMinimumSize(QSize(140, 60));
+        label_5->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);\n"
+"border-radius: 10;\n"
+"text-align: center;\n"
+"font: 700 9pt \"Segoe UI\";"));
+        label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_2->addWidget(label_5);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_2);
-
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        label_scan = new QLabel(widget);
+        label_scan = new QLabel(layoutWidget);
         label_scan->setObjectName("label_scan");
+        label_scan->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout->addWidget(label_scan);
 
-        pushButton = new QPushButton(widget);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName("pushButton");
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
 
         verticalLayout->addWidget(pushButton);
 
@@ -119,32 +132,36 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
-        label_rescan = new QLabel(widget);
+        label_rescan = new QLabel(layoutWidget);
         label_rescan->setObjectName("label_rescan");
+        label_rescan->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_2->addWidget(label_rescan);
 
-        pushButton_2 = new QPushButton(widget);
+        pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
 
         verticalLayout_2->addWidget(pushButton_2);
 
 
         horizontalLayout->addLayout(verticalLayout_2);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer);
+        horizontalLayout->addItem(horizontalSpacer_2);
 
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName("verticalLayout_3");
-        label_close = new QLabel(widget);
+        label_close = new QLabel(layoutWidget);
         label_close->setObjectName("label_close");
+        label_close->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_3->addWidget(label_close);
 
-        pushButton_5 = new QPushButton(widget);
+        pushButton_5 = new QPushButton(layoutWidget);
         pushButton_5->setObjectName("pushButton_5");
+        pushButton_5->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
 
         verticalLayout_3->addWidget(pushButton_5);
 
@@ -157,24 +174,34 @@ public:
 
         verticalLayout_8->addLayout(horizontalLayout_2);
 
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout_8->addItem(verticalSpacer);
+
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName("verticalLayout_5");
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);\n"
+"font: 700 12pt \"Segoe UI\";\n"
+"border-radius: 10;"));
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_5->addWidget(label);
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName("verticalLayout_4");
-        pushButton_3 = new QPushButton(widget);
+        pushButton_3 = new QPushButton(layoutWidget);
         pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
 
         verticalLayout_4->addWidget(pushButton_3);
 
-        pushButton_4 = new QPushButton(widget);
+        pushButton_4 = new QPushButton(layoutWidget);
         pushButton_4->setObjectName("pushButton_4");
+        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
 
         verticalLayout_4->addWidget(pushButton_4);
 
@@ -186,24 +213,36 @@ public:
 
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setObjectName("verticalLayout_6");
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName("label_3");
+        label_3->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);\n"
+"font: 700 12pt \"Segoe UI\";\n"
+"border-radius: 10;"));
+        label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_6->addWidget(label_3);
 
-        textEdit_selectedFolder = new QTextEdit(widget);
+        textEdit_selectedFolder = new QTextEdit(layoutWidget);
         textEdit_selectedFolder->setObjectName("textEdit_selectedFolder");
+        textEdit_selectedFolder->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
+"background-color: rgb(255, 255, 255);"));
         textEdit_selectedFolder->setReadOnly(true);
 
         verticalLayout_6->addWidget(textEdit_selectedFolder);
 
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName("label_4");
+        label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);\n"
+"font: 700 12pt \"Segoe UI\";\n"
+"border-radius: 10;"));
+        label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_6->addWidget(label_4);
 
-        textEdit_destinationFolder = new QTextEdit(widget);
+        textEdit_destinationFolder = new QTextEdit(layoutWidget);
         textEdit_destinationFolder->setObjectName("textEdit_destinationFolder");
+        textEdit_destinationFolder->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
+"background-color: rgb(255, 255, 255);"));
         textEdit_destinationFolder->setReadOnly(true);
 
         verticalLayout_6->addWidget(textEdit_destinationFolder);
@@ -219,7 +258,7 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
-        label_signal = new QLabel(widget);
+        label_signal = new QLabel(layoutWidget);
         label_signal->setObjectName("label_signal");
 
         horizontalLayout_4->addWidget(label_signal);
@@ -228,8 +267,15 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_4);
 
-        pushButton_scanSelected = new QPushButton(widget);
+        label_selectedScanImg = new QLabel(layoutWidget);
+        label_selectedScanImg->setObjectName("label_selectedScanImg");
+        label_selectedScanImg->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_4->addWidget(label_selectedScanImg);
+
+        pushButton_scanSelected = new QPushButton(layoutWidget);
         pushButton_scanSelected->setObjectName("pushButton_scanSelected");
+        pushButton_scanSelected->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
 
         horizontalLayout_4->addWidget(pushButton_scanSelected);
 
@@ -267,19 +313,23 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label_2->setText(QString());
+        label_5->setText(QCoreApplication::translate("MainWindow", "ShinyGleam Software\n"
+" DataRecovery", nullptr));
         label_scan->setText(QString());
         pushButton->setText(QCoreApplication::translate("MainWindow", "Scan", nullptr));
         label_rescan->setText(QString());
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Rescan", nullptr));
         label_close->setText(QString());
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "For custom scan select a folder", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", " For custom scan\n"
+" select a Drive ", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Select a folder to scan ", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "select destination folder ", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Selected folder", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "Destination folder", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Selected Source Drive Path", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "Selected Destination Path", nullptr));
         label_signal->setText(QString());
-        pushButton_scanSelected->setText(QCoreApplication::translate("MainWindow", "scan selected folder", nullptr));
+        label_selectedScanImg->setText(QString());
+        pushButton_scanSelected->setText(QCoreApplication::translate("MainWindow", "Scan Selected", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuSettings->setTitle(QCoreApplication::translate("MainWindow", "Settings", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));

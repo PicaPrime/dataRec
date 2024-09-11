@@ -13,8 +13,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(212, 241, 244);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -36,20 +40,30 @@
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
+          <widget class="QLabel" name="label_5">
+           <property name="minimumSize">
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>140</width>
+             <height>60</height>
             </size>
            </property>
-          </spacer>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(25, 143, 126);
+border-radius: 10;
+text-align: center;
+font: 700 9pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>ShinyGleam Software
+ DataRecovery</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_2">
+          <spacer name="horizontalSpacer_3">
            <property name="orientation">
             <enum>Qt::Orientation::Horizontal</enum>
            </property>
@@ -70,10 +84,16 @@
                <property name="text">
                 <string/>
                </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(25, 143, 126);</string>
+               </property>
                <property name="text">
                 <string>Scan</string>
                </property>
@@ -88,10 +108,16 @@
                <property name="text">
                 <string/>
                </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_2">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(25, 143, 126);</string>
+               </property>
                <property name="text">
                 <string>Rescan</string>
                </property>
@@ -100,7 +126,7 @@
             </layout>
            </item>
            <item>
-            <spacer name="horizontalSpacer">
+            <spacer name="horizontalSpacer_2">
              <property name="orientation">
               <enum>Qt::Orientation::Horizontal</enum>
              </property>
@@ -119,10 +145,16 @@
                <property name="text">
                 <string/>
                </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_5">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(25, 143, 126);</string>
+               </property>
                <property name="text">
                 <string>Close</string>
                </property>
@@ -135,13 +167,35 @@
         </layout>
        </item>
        <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_5">
            <item>
             <widget class="QLabel" name="label">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(25, 143, 126);
+font: 700 12pt &quot;Segoe UI&quot;;
+border-radius: 10;</string>
+             </property>
              <property name="text">
-              <string>For custom scan select a folder</string>
+              <string> For custom scan
+ select a Drive </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -149,6 +203,9 @@
             <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
               <widget class="QPushButton" name="pushButton_3">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(25, 143, 126);</string>
+               </property>
                <property name="text">
                 <string>Select a folder to scan </string>
                </property>
@@ -156,6 +213,9 @@
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_4">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(25, 143, 126);</string>
+               </property>
                <property name="text">
                 <string>select destination folder </string>
                </property>
@@ -169,13 +229,25 @@
           <layout class="QVBoxLayout" name="verticalLayout_6">
            <item>
             <widget class="QLabel" name="label_3">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(25, 143, 126);
+font: 700 12pt &quot;Segoe UI&quot;;
+border-radius: 10;</string>
+             </property>
              <property name="text">
-              <string>Selected folder</string>
+              <string>Selected Source Drive Path</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QTextEdit" name="textEdit_selectedFolder">
+             <property name="styleSheet">
+              <string notr="true">border-radius: 10;
+background-color: rgb(255, 255, 255);</string>
+             </property>
              <property name="readOnly">
               <bool>true</bool>
              </property>
@@ -183,13 +255,25 @@
            </item>
            <item>
             <widget class="QLabel" name="label_4">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(25, 143, 126);
+font: 700 12pt &quot;Segoe UI&quot;;
+border-radius: 10;</string>
+             </property>
              <property name="text">
-              <string>Destination folder</string>
+              <string>Selected Destination Path</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QTextEdit" name="textEdit_destinationFolder">
+             <property name="styleSheet">
+              <string notr="true">border-radius: 10;
+background-color: rgb(255, 255, 255);</string>
+             </property>
              <property name="readOnly">
               <bool>true</bool>
              </property>
@@ -224,9 +308,22 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_scanSelected">
+        <widget class="QLabel" name="label_selectedScanImg">
          <property name="text">
-          <string>scan selected folder</string>
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_scanSelected">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(25, 143, 126);</string>
+         </property>
+         <property name="text">
+          <string>Scan Selected</string>
          </property>
         </widget>
        </item>

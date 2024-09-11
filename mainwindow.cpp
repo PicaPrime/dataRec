@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QIcon icon(":/images/shinygleam data recovery logo.jpg");
     setWindowIcon(icon);
-    setWindowTitle("SHINY GLEAM DataRecovery");
+    setWindowTitle("SHINYGLEAM DataRecovery");
 
     QPixmap pixmap1(":/images/shinygleam data recovery logo.jpg");
     // int w = ui->label_2->width();
@@ -47,6 +47,12 @@ MainWindow::MainWindow(QWidget *parent)
     h = ui->label_rescan->height();
 
     ui->label_rescan->setPixmap(pixmap4.scaled(w, h, Qt::KeepAspectRatio));
+
+    QPixmap pixmap5(":/images/magnifying glass.png");
+    w = ui->label_selectedScanImg->width();
+    h = ui->label_selectedScanImg->height();
+
+    ui->label_selectedScanImg->setPixmap(pixmap5.scaled(w, h, Qt::KeepAspectRatio));
 }
 
 MainWindow::~MainWindow()

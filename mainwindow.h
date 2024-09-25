@@ -30,6 +30,10 @@ private slots:
 
     void on_label_2_linkActivated(const QString &link);
 
+    // void on_label_selectedDriveScan_linkActivated(const QString &link);
+
+    void on_pushButton_selectedScan_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

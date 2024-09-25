@@ -5,5 +5,8 @@
         <file>images/zondicons_refresh.png</file>
         <file>images/shinygleam data recovery logo.jpg</file>
         <file>images/close.png</file>
+        <file>images/deep scan.png</file>
+        <file>images/partition scan.png</file>
+        <file>images/selected drive scan.png</file>
     </qresource>
 </RCC>

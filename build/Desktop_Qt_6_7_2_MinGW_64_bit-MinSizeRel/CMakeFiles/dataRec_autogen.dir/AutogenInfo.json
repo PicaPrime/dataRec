@@ -270,6 +270,18 @@
 			null
 		],
 		[
+			"D:/dataRec/dialog_selectedscan.h",
+			"MU",
+			"EWIEGA46WW/moc_dialog_selectedscan.cpp",
+			null
+		],
+		[
+			"D:/dataRec/landingdialog.h",
+			"MU",
+			"EWIEGA46WW/moc_landingdialog.cpp",
+			null
+		],
+		[
 			"D:/dataRec/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -350,6 +362,8 @@
 	[
 		[ "D:/dataRec/DiskScanner.cpp", "MU", null ],
 		[ "D:/dataRec/MP4Recovery.cpp", "MU", null ],
+		[ "D:/dataRec/dialog_selectedscan.cpp", "MU", null ],
+		[ "D:/dataRec/landingdialog.cpp", "MU", null ],
 		[ "D:/dataRec/main.cpp", "MU", null ],
 		[ "D:/dataRec/mainwindow.cpp", "MU", null ]
 	],

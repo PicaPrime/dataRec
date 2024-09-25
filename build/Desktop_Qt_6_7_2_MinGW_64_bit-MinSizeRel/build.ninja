@@ -89,6 +89,22 @@ build CMakeFiles/dataRec.dir/DiskScanner.cpp.obj: CXX_COMPILER__dataRec_unscanne
   OBJECT_DIR = CMakeFiles\dataRec.dir
   OBJECT_FILE_DIR = CMakeFiles\dataRec.dir
 
+build CMakeFiles/dataRec.dir/landingdialog.cpp.obj: CXX_COMPILER__dataRec_unscanned_MinSizeRel D$:/dataRec/landingdialog.cpp || cmake_object_order_depends_target_dataRec
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\dataRec.dir\landingdialog.cpp.obj.d
+  FLAGS = -Os -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-MinSizeRel/dataRec_autogen/include -isystem C:/Qt/6.7.2/mingw_64/include/QtCore -isystem C:/Qt/6.7.2/mingw_64/include -isystem C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\dataRec.dir
+  OBJECT_FILE_DIR = CMakeFiles\dataRec.dir
+
+build CMakeFiles/dataRec.dir/dialog_selectedscan.cpp.obj: CXX_COMPILER__dataRec_unscanned_MinSizeRel D$:/dataRec/dialog_selectedscan.cpp || cmake_object_order_depends_target_dataRec
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\dataRec.dir\dialog_selectedscan.cpp.obj.d
+  FLAGS = -Os -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-MinSizeRel/dataRec_autogen/include -isystem C:/Qt/6.7.2/mingw_64/include/QtCore -isystem C:/Qt/6.7.2/mingw_64/include -isystem C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\dataRec.dir
+  OBJECT_FILE_DIR = CMakeFiles\dataRec.dir
+
 build CMakeFiles/dataRec.dir/dataRec_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CXX_COMPILER__dataRec_unscanned_MinSizeRel D$:/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-MinSizeRel/dataRec_autogen/EWIEGA46WW/qrc_resources.cpp || cmake_object_order_depends_target_dataRec
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\dataRec.dir\dataRec_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d
@@ -105,7 +121,7 @@ build CMakeFiles/dataRec.dir/dataRec_autogen/EWIEGA46WW/qrc_resources.cpp.obj: C
 #############################################
 # Link the executable dataRec.exe
 
-build dataRec.exe: CXX_EXECUTABLE_LINKER__dataRec_MinSizeRel CMakeFiles/dataRec.dir/dataRec_autogen/mocs_compilation.cpp.obj CMakeFiles/dataRec.dir/main.cpp.obj CMakeFiles/dataRec.dir/mainwindow.cpp.obj CMakeFiles/dataRec.dir/MP4Recovery.cpp.obj CMakeFiles/dataRec.dir/DiskScanner.cpp.obj CMakeFiles/dataRec.dir/dataRec_autogen/EWIEGA46WW/qrc_resources.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || dataRec_autogen dataRec_autogen_timestamp_deps
+build dataRec.exe: CXX_EXECUTABLE_LINKER__dataRec_MinSizeRel CMakeFiles/dataRec.dir/dataRec_autogen/mocs_compilation.cpp.obj CMakeFiles/dataRec.dir/main.cpp.obj CMakeFiles/dataRec.dir/mainwindow.cpp.obj CMakeFiles/dataRec.dir/MP4Recovery.cpp.obj CMakeFiles/dataRec.dir/DiskScanner.cpp.obj CMakeFiles/dataRec.dir/landingdialog.cpp.obj CMakeFiles/dataRec.dir/dialog_selectedscan.cpp.obj CMakeFiles/dataRec.dir/dataRec_autogen/EWIEGA46WW/qrc_resources.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || dataRec_autogen dataRec_autogen_timestamp_deps
   FLAGS = -Os -DNDEBUG
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -192,7 +208,7 @@ build dataRec_autogen_timestamp_deps: phony
 #############################################
 # Utility command for dataRec_autogen
 
-build dataRec_autogen: phony CMakeFiles/dataRec_autogen dataRec_autogen/include/ui_mainwindow.h dataRec_autogen/timestamp dataRec_autogen/mocs_compilation.cpp dataRec_autogen_timestamp_deps
+build dataRec_autogen: phony CMakeFiles/dataRec_autogen dataRec_autogen/include/ui_mainwindow.h dataRec_autogen/include/ui_landingdialog.h dataRec_autogen/include/ui_dialog_selectedscan.h dataRec_autogen/timestamp dataRec_autogen/mocs_compilation.cpp dataRec_autogen_timestamp_deps
 
 
 #############################################
@@ -209,7 +225,7 @@ build dataRec_autogen/timestamp dataRec_autogen/mocs_compilation.cpp | ${cmake_n
 #############################################
 # Custom command for dataRec_autogen\EWIEGA46WW\qrc_resources.cpp
 
-build dataRec_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}dataRec_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND D$:/dataRec/resources.qrc CMakeFiles/dataRec_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json D$:/dataRec/images/zondicons_refresh.png D$:/dataRec/images/ep_filter.png D$:/dataRec/images/shinygleam$ data$ recovery$ logo.jpg D$:/dataRec/images/magnifying$ glass.png D$:/dataRec/images/close.png C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe || dataRec_autogen dataRec_autogen_timestamp_deps
+build dataRec_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}dataRec_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND D$:/dataRec/resources.qrc CMakeFiles/dataRec_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json D$:/dataRec/images/zondicons_refresh.png D$:/dataRec/images/selected$ drive$ scan.png D$:/dataRec/images/ep_filter.png D$:/dataRec/images/partition$ scan.png D$:/dataRec/images/deep$ scan.png D$:/dataRec/images/shinygleam$ data$ recovery$ logo.jpg D$:/dataRec/images/magnifying$ glass.png D$:/dataRec/images/close.png C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe || dataRec_autogen dataRec_autogen_timestamp_deps
   COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\dataRec\build\Desktop_Qt_6_7_2_MinGW_64_bit-MinSizeRel && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc D:/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-MinSizeRel/CMakeFiles/dataRec_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json MinSizeRel"
   DESC = Automatic RCC for resources.qrc
   restat = 1
@@ -218,7 +234,7 @@ build dataRec_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}dataR
 #############################################
 # Phony custom command for CMakeFiles\dataRec_autogen
 
-build CMakeFiles/dataRec_autogen dataRec_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/dataRec_autogen ${cmake_ninja_workdir}dataRec_autogen/include/ui_mainwindow.h: phony dataRec_autogen/timestamp || dataRec_autogen_timestamp_deps
+build CMakeFiles/dataRec_autogen dataRec_autogen/include/ui_mainwindow.h dataRec_autogen/include/ui_landingdialog.h dataRec_autogen/include/ui_dialog_selectedscan.h | ${cmake_ninja_workdir}CMakeFiles/dataRec_autogen ${cmake_ninja_workdir}dataRec_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}dataRec_autogen/include/ui_landingdialog.h ${cmake_ninja_workdir}dataRec_autogen/include/ui_dialog_selectedscan.h: phony dataRec_autogen/timestamp || dataRec_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

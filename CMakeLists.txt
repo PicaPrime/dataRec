@@ -28,6 +28,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MP4Recovery.h
         DiskScanner.h
         DiskScanner.cpp
+        landingdialog.h landingdialog.cpp landingdialog.ui
+        dialog_selectedscan.h dialog_selectedscan.cpp dialog_selectedscan.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET dataRec APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

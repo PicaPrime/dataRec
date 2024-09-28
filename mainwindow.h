@@ -18,17 +18,8 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_3_clicked();
 
-    void on_pushButton_clicked();
-
-    void on_pushButton_4_clicked();
-
-    void on_pushButton_5_clicked();
-
-    void on_pushButton_scanSelected_clicked();
-
-    void on_label_2_linkActivated(const QString &link);
+    // void on_pushButton_scanSelected_clicked();
 
     // void on_label_selectedDriveScan_linkActivated(const QString &link);
 

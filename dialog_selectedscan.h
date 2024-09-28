@@ -15,6 +15,13 @@ public:
     explicit Dialog_selectedScan(QWidget *parent = nullptr);
     ~Dialog_selectedScan();
 
+private slots:
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_scanSelected_clicked();
+
 private:
     Ui::Dialog_selectedScan *ui;
 };

@@ -25,219 +25,140 @@ QT_BEGIN_NAMESPACE
 class Ui_Dialog_selectedScan
 {
 public:
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout_7;
-    QVBoxLayout *verticalLayout_8;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_2;
-    QSpacerItem *horizontalSpacer_3;
-    QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
-    QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton_2;
-    QSpacerItem *horizontalSpacer_2;
+    QTextEdit *textEdit;
+    QPushButton *pushButton_scanSelected_2;
+    QWidget *widget;
     QVBoxLayout *verticalLayout_3;
-    QPushButton *pushButton_close;
-    QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout_3;
-    QVBoxLayout *verticalLayout_5;
-    QLabel *label;
-    QVBoxLayout *verticalLayout_4;
+    QHBoxLayout *horizontalLayout_2;
+    QHBoxLayout *horizontalLayout;
+    QVBoxLayout *verticalLayout_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
-    QVBoxLayout *verticalLayout_6;
-    QLabel *label_3;
+    QVBoxLayout *verticalLayout;
     QTextEdit *textEdit_selectedFolder;
-    QLabel *label_4;
     QTextEdit *textEdit_destinationFolder;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *label_signal;
-    QSpacerItem *horizontalSpacer_4;
-    QLabel *label_selectedScanImg;
+    QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton_scanSelected;
+    QSpacerItem *horizontalSpacer_2;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer;
 
     void setupUi(QDialog *Dialog_selectedScan)
     {
         if (Dialog_selectedScan->objectName().isEmpty())
             Dialog_selectedScan->setObjectName("Dialog_selectedScan");
         Dialog_selectedScan->resize(640, 480);
+        Dialog_selectedScan->setMinimumSize(QSize(0, 75));
         Dialog_selectedScan->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 255);"));
-        layoutWidget = new QWidget(Dialog_selectedScan);
-        layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(60, 30, 531, 401));
-        verticalLayout_7 = new QVBoxLayout(layoutWidget);
-        verticalLayout_7->setObjectName("verticalLayout_7");
-        verticalLayout_7->setContentsMargins(0, 0, 0, 0);
-        verticalLayout_8 = new QVBoxLayout();
-        verticalLayout_8->setObjectName("verticalLayout_8");
+        textEdit = new QTextEdit(Dialog_selectedScan);
+        textEdit->setObjectName("textEdit");
+        textEdit->setGeometry(QRect(30, 180, 591, 221));
+        textEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"border-radius: 5;"));
+        pushButton_scanSelected_2 = new QPushButton(Dialog_selectedScan);
+        pushButton_scanSelected_2->setObjectName("pushButton_scanSelected_2");
+        pushButton_scanSelected_2->setGeometry(QRect(520, 420, 101, 40));
+        pushButton_scanSelected_2->setMinimumSize(QSize(50, 40));
+        pushButton_scanSelected_2->setMaximumSize(QSize(16777215, 40));
+        pushButton_scanSelected_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"border-radius: 5;"));
+        pushButton_scanSelected_2->setIconSize(QSize(25, 25));
+        widget = new QWidget(Dialog_selectedScan);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(20, 20, 591, 141));
+        verticalLayout_3 = new QVBoxLayout(widget);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName("label_2");
-
-        horizontalLayout_2->addWidget(label_2);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_3);
-
+        horizontalLayout_2->setSizeConstraint(QLayout::SizeConstraint::SetFixedSize);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName("verticalLayout");
-        pushButton = new QPushButton(layoutWidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
-
-        verticalLayout->addWidget(pushButton);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
+        horizontalLayout->setSizeConstraint(QLayout::SizeConstraint::SetFixedSize);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
-        pushButton_2 = new QPushButton(layoutWidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
+        pushButton_3 = new QPushButton(widget);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setMaximumSize(QSize(16777215, 25));
+        pushButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"font: 700 10pt \"Segoe UI\";\n"
+"border-radius: 5;"));
 
-        verticalLayout_2->addWidget(pushButton_2);
+        verticalLayout_2->addWidget(pushButton_3);
+
+        pushButton_4 = new QPushButton(widget);
+        pushButton_4->setObjectName("pushButton_4");
+        pushButton_4->setMaximumSize(QSize(16777215, 25));
+        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"font: 700 10pt \"Segoe UI\";\n"
+"border-radius: 5;"));
+
+        verticalLayout_2->addWidget(pushButton_4);
 
 
         horizontalLayout->addLayout(verticalLayout_2);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName("verticalLayout");
+        textEdit_selectedFolder = new QTextEdit(widget);
+        textEdit_selectedFolder->setObjectName("textEdit_selectedFolder");
+        textEdit_selectedFolder->setMaximumSize(QSize(16777215, 25));
+        textEdit_selectedFolder->setStyleSheet(QString::fromUtf8("border-radius: 5;\n"
+"background-color: rgb(255, 255, 255);"));
+        textEdit_selectedFolder->setReadOnly(true);
 
-        horizontalLayout->addItem(horizontalSpacer_2);
+        verticalLayout->addWidget(textEdit_selectedFolder);
 
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        pushButton_close = new QPushButton(layoutWidget);
-        pushButton_close->setObjectName("pushButton_close");
-        pushButton_close->setMinimumSize(QSize(50, 50));
-        pushButton_close->setStyleSheet(QString::fromUtf8(""));
-        pushButton_close->setIconSize(QSize(50, 50));
+        textEdit_destinationFolder = new QTextEdit(widget);
+        textEdit_destinationFolder->setObjectName("textEdit_destinationFolder");
+        textEdit_destinationFolder->setMaximumSize(QSize(16777215, 25));
+        textEdit_destinationFolder->setStyleSheet(QString::fromUtf8("border-radius: 5;\n"
+"background-color: rgb(255, 255, 255);"));
+        textEdit_destinationFolder->setReadOnly(true);
 
-        verticalLayout_3->addWidget(pushButton_close);
+        verticalLayout->addWidget(textEdit_destinationFolder);
 
 
-        horizontalLayout->addLayout(verticalLayout_3);
+        horizontalLayout->addLayout(verticalLayout);
 
 
         horizontalLayout_2->addLayout(horizontalLayout);
 
 
-        verticalLayout_8->addLayout(horizontalLayout_2);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout_8->addItem(verticalSpacer);
+        verticalLayout_3->addLayout(horizontalLayout_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        verticalLayout_5 = new QVBoxLayout();
-        verticalLayout_5->setObjectName("verticalLayout_5");
-        label = new QLabel(layoutWidget);
-        label->setObjectName("label");
-        label->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);\n"
-"font: 700 12pt \"Segoe UI\";\n"
-"border-radius: 10;"));
-        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        verticalLayout_5->addWidget(label);
-
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        pushButton_3 = new QPushButton(layoutWidget);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
-
-        verticalLayout_4->addWidget(pushButton_3);
-
-        pushButton_4 = new QPushButton(layoutWidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);"));
-
-        verticalLayout_4->addWidget(pushButton_4);
-
-
-        verticalLayout_5->addLayout(verticalLayout_4);
-
-
-        horizontalLayout_3->addLayout(verticalLayout_5);
-
-        verticalLayout_6 = new QVBoxLayout();
-        verticalLayout_6->setObjectName("verticalLayout_6");
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName("label_3");
-        label_3->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);\n"
-"font: 700 12pt \"Segoe UI\";\n"
-"border-radius: 10;"));
-        label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        verticalLayout_6->addWidget(label_3);
-
-        textEdit_selectedFolder = new QTextEdit(layoutWidget);
-        textEdit_selectedFolder->setObjectName("textEdit_selectedFolder");
-        textEdit_selectedFolder->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
-"background-color: rgb(255, 255, 255);"));
-        textEdit_selectedFolder->setReadOnly(true);
-
-        verticalLayout_6->addWidget(textEdit_selectedFolder);
-
-        label_4 = new QLabel(layoutWidget);
-        label_4->setObjectName("label_4");
-        label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(25, 143, 126);\n"
-"font: 700 12pt \"Segoe UI\";\n"
-"border-radius: 10;"));
-        label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        verticalLayout_6->addWidget(label_4);
-
-        textEdit_destinationFolder = new QTextEdit(layoutWidget);
-        textEdit_destinationFolder->setObjectName("textEdit_destinationFolder");
-        textEdit_destinationFolder->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
-"background-color: rgb(255, 255, 255);"));
-        textEdit_destinationFolder->setReadOnly(true);
-
-        verticalLayout_6->addWidget(textEdit_destinationFolder);
-
-
-        horizontalLayout_3->addLayout(verticalLayout_6);
-
-
-        verticalLayout_8->addLayout(horizontalLayout_3);
-
-
-        verticalLayout_7->addLayout(verticalLayout_8);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        label_signal = new QLabel(layoutWidget);
-        label_signal->setObjectName("label_signal");
-
-        horizontalLayout_4->addWidget(label_signal);
-
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_4);
-
-        label_selectedScanImg = new QLabel(layoutWidget);
-        label_selectedScanImg->setObjectName("label_selectedScanImg");
-        label_selectedScanImg->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        horizontalLayout_4->addWidget(label_selectedScanImg);
-
-        pushButton_scanSelected = new QPushButton(layoutWidget);
+        pushButton_scanSelected = new QPushButton(widget);
         pushButton_scanSelected->setObjectName("pushButton_scanSelected");
         pushButton_scanSelected->setMinimumSize(QSize(50, 50));
-        pushButton_scanSelected->setStyleSheet(QString::fromUtf8(""));
-        pushButton_scanSelected->setIconSize(QSize(50, 50));
+        pushButton_scanSelected->setMaximumSize(QSize(16777215, 50));
+        pushButton_scanSelected->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"border-radius: 5;"));
+        pushButton_scanSelected->setIconSize(QSize(25, 25));
 
-        horizontalLayout_4->addWidget(pushButton_scanSelected);
+        horizontalLayout_3->addWidget(pushButton_scanSelected);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_2);
+
+        label = new QLabel(widget);
+        label->setObjectName("label");
+        label->setMinimumSize(QSize(100, 50));
+        label->setMaximumSize(QSize(16777215, 50));
+        label->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"border-radius: 5;"));
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_3->addWidget(label);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
 
 
-        verticalLayout_7->addLayout(horizontalLayout_4);
+        verticalLayout_3->addLayout(horizontalLayout_3);
 
 
         retranslateUi(Dialog_selectedScan);
@@ -248,19 +169,35 @@ public:
     void retranslateUi(QDialog *Dialog_selectedScan)
     {
         Dialog_selectedScan->setWindowTitle(QCoreApplication::translate("Dialog_selectedScan", "Dialog", nullptr));
-        label_2->setText(QString());
-        pushButton->setText(QCoreApplication::translate("Dialog_selectedScan", "Scan", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Dialog_selectedScan", "Rescan", nullptr));
-        pushButton_close->setText(QString());
-        label->setText(QCoreApplication::translate("Dialog_selectedScan", " For custom scan\n"
-" select a Drive ", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Dialog_selectedScan", "Select a folder to scan ", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("Dialog_selectedScan", "select destination folder ", nullptr));
-        label_3->setText(QCoreApplication::translate("Dialog_selectedScan", "Selected Source Drive Path", nullptr));
-        label_4->setText(QCoreApplication::translate("Dialog_selectedScan", "Selected Destination Path", nullptr));
-        label_signal->setText(QString());
-        label_selectedScanImg->setText(QString());
-        pushButton_scanSelected->setText(QCoreApplication::translate("Dialog_selectedScan", "Scan Selected", nullptr));
+        textEdit->setHtml(QCoreApplication::translate("Dialog_selectedScan", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Results</p></body></html>", nullptr));
+        pushButton_scanSelected_2->setText(QCoreApplication::translate("Dialog_selectedScan", "Cancel Scan", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("Dialog_selectedScan", "Select Folder ", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("Dialog_selectedScan", "  Select Destination  ", nullptr));
+        textEdit_selectedFolder->setHtml(QCoreApplication::translate("Dialog_selectedScan", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Path:</p></body></html>", nullptr));
+        textEdit_destinationFolder->setHtml(QCoreApplication::translate("Dialog_selectedScan", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Path:</p></body></html>", nullptr));
+        pushButton_scanSelected->setText(QCoreApplication::translate("Dialog_selectedScan", "  Scan Selected  ", nullptr));
+        label->setText(QCoreApplication::translate("Dialog_selectedScan", "Scan Status ...", nullptr));
     } // retranslateUi
 
 };

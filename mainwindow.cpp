@@ -16,25 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    int w;
-    int h;
-    QPixmap pixmap_label_deepScan(":/images/deep scan.png");
-    w = ui->label_deepScan->width();
-    h = ui->label_deepScan->height();
-
-    ui->label_deepScan->setPixmap(pixmap_label_deepScan.scaled(w, h, Qt::KeepAspectRatio));
-
-    QPixmap pixmap_label_partitionScan(":/images/partition scan.png");
-    w = ui->label_partitionScan->width();
-    h = ui->label_partitionScan->height();
-
-    ui->label_partitionScan->setPixmap(pixmap_label_partitionScan.scaled(w, h, Qt::KeepAspectRatio));
-
-    QPixmap pixmap_label_selectedDriveScan(":/images/selected drive scan.png");
-    w = ui->label_selectedDriveScan->width();
-    h = ui->label_selectedDriveScan->height();
-
-    ui->label_selectedDriveScan->setPixmap(pixmap_label_selectedDriveScan.scaled(w, h, Qt::KeepAspectRatio));
 }
 
 MainWindow::~MainWindow()
@@ -108,6 +89,11 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_selectedScan_clicked()
 {
     Dialog_selectedScan selectedScan;
+
+    QIcon icon(":/images/shinygleam data recovery logo.jpg");  // Make sure the icon file exists at this path
+    selectedScan.setWindowIcon(icon);
+
+    selectedScan.setWindowTitle("Selected Scan");
     selectedScan.setModal(true);
     selectedScan.exec();
 }

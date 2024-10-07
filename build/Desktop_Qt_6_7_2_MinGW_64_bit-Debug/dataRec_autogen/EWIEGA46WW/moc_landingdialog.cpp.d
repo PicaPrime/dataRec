@@ -1,4 +1,4 @@
-D:/QT\ Project\ Folder/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/dataRec_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/QT\ Project\ Folder/dataRec/mainwindow.h \
+D:/QT\ Project\ Folder/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/dataRec_autogen/EWIEGA46WW/moc_landingdialog.cpp: D:/QT\ Project\ Folder/dataRec/landingdialog.h \
   D:/QT\ Project\ Folder/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/dataRec_autogen/moc_predefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
@@ -142,10 +142,9 @@ D:/QT\ Project\ Folder/dataRec/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/dataRec
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

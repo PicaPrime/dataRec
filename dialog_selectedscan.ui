@@ -20,7 +20,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(37,123,232);</string>
+   <string notr="true">background-color: rgb(211, 231, 255);</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
@@ -62,7 +62,7 @@
        <item>
         <widget class="QFrame" name="frame">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);
+          <string notr="true">background-color: rgb(244, 249, 255);
 border-radius: 10;</string>
          </property>
          <property name="frameShape">

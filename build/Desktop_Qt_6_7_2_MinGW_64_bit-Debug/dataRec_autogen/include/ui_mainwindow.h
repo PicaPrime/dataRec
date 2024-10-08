@@ -10,12 +10,10 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
@@ -28,8 +26,17 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QVBoxLayout *verticalLayout_4;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_7;
+    QVBoxLayout *verticalLayout_3;
+    QSpacerItem *verticalSpacer_3;
+    QFrame *frame;
+    QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
-    QSpacerItem *verticalSpacer;
+    QSpacerItem *verticalSpacer_2;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_5;
     QSpacerItem *horizontalSpacer_2;
     QVBoxLayout *verticalLayout_9;
@@ -41,12 +48,10 @@ public:
     QVBoxLayout *verticalLayout_11;
     QPushButton *pushButton_selectedScan;
     QSpacerItem *horizontalSpacer_3;
-    QSpacerItem *verticalSpacer_2;
-    QMenuBar *menubar;
-    QMenu *menuFile;
-    QMenu *menuSettings;
-    QMenu *menuView;
-    QMenu *menuHelp;
+    QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *verticalSpacer;
+    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *horizontalSpacer_8;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -55,14 +60,42 @@ public:
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(640, 480);
         MainWindow->setStyleSheet(QString::fromUtf8("\n"
-"background-color: rgb(37,123,232);"));
+"background-color: rgb(211, 231, 255);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        verticalLayout_4 = new QVBoxLayout(centralwidget);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
 
-        verticalLayout->addItem(verticalSpacer);
+        horizontalLayout_2->addItem(horizontalSpacer_7);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+
+        verticalLayout_3->addItem(verticalSpacer_3);
+
+        frame = new QFrame(centralwidget);
+        frame->setObjectName("frame");
+        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(244, 249, 255);\n"
+"border-radius: 5;	"));
+        frame->setFrameShape(QFrame::Shape::StyledPanel);
+        frame->setFrameShadow(QFrame::Shadow::Raised);
+        verticalLayout_2 = new QVBoxLayout(frame);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName("verticalLayout");
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_2);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_4);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName("horizontalLayout_5");
@@ -72,7 +105,7 @@ public:
 
         verticalLayout_9 = new QVBoxLayout();
         verticalLayout_9->setObjectName("verticalLayout_9");
-        pushButton_deepScan = new QPushButton(centralwidget);
+        pushButton_deepScan = new QPushButton(frame);
         pushButton_deepScan->setObjectName("pushButton_deepScan");
         pushButton_deepScan->setMinimumSize(QSize(100, 100));
         pushButton_deepScan->setStyleSheet(QString::fromUtf8("image: url(:/images/deep scan.png);"));
@@ -88,7 +121,7 @@ public:
 
         verticalLayout_10 = new QVBoxLayout();
         verticalLayout_10->setObjectName("verticalLayout_10");
-        pushButton_partitionScan = new QPushButton(centralwidget);
+        pushButton_partitionScan = new QPushButton(frame);
         pushButton_partitionScan->setObjectName("pushButton_partitionScan");
         pushButton_partitionScan->setMinimumSize(QSize(100, 100));
         pushButton_partitionScan->setStyleSheet(QString::fromUtf8("image: url(:/images/partition scan.png);"));
@@ -104,7 +137,7 @@ public:
 
         verticalLayout_11 = new QVBoxLayout();
         verticalLayout_11->setObjectName("verticalLayout_11");
-        pushButton_selectedScan = new QPushButton(centralwidget);
+        pushButton_selectedScan = new QPushButton(frame);
         pushButton_selectedScan->setObjectName("pushButton_selectedScan");
         pushButton_selectedScan->setMinimumSize(QSize(100, 100));
         pushButton_selectedScan->setStyleSheet(QString::fromUtf8("image: url(:/images/selected drive scan.png);"));
@@ -119,33 +152,43 @@ public:
         horizontalLayout_5->addItem(horizontalSpacer_3);
 
 
-        verticalLayout->addLayout(horizontalLayout_5);
+        horizontalLayout->addLayout(horizontalLayout_5);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        verticalLayout->addItem(verticalSpacer_2);
+        horizontalLayout->addItem(horizontalSpacer_6);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
+
+
+        verticalLayout_3->addWidget(frame);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+
+        verticalLayout_3->addItem(verticalSpacer_4);
+
+
+        horizontalLayout_2->addLayout(verticalLayout_3);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_8);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_2);
 
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 640, 25));
-        menuFile = new QMenu(menubar);
-        menuFile->setObjectName("menuFile");
-        menuSettings = new QMenu(menubar);
-        menuSettings->setObjectName("menuSettings");
-        menuView = new QMenu(menubar);
-        menuView->setObjectName("menuView");
-        menuHelp = new QMenu(menubar);
-        menuHelp->setObjectName("menuHelp");
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
-
-        menubar->addAction(menuFile->menuAction());
-        menubar->addAction(menuSettings->menuAction());
-        menubar->addAction(menuView->menuAction());
-        menubar->addAction(menuHelp->menuAction());
 
         retranslateUi(MainWindow);
 
@@ -158,10 +201,6 @@ public:
         pushButton_deepScan->setText(QString());
         pushButton_partitionScan->setText(QString());
         pushButton_selectedScan->setText(QString());
-        menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
-        menuSettings->setTitle(QCoreApplication::translate("MainWindow", "Settings", nullptr));
-        menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
-        menuHelp->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
 
 };

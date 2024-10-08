@@ -61,7 +61,7 @@ public:
             Dialog_selectedScan->setObjectName("Dialog_selectedScan");
         Dialog_selectedScan->resize(800, 616);
         Dialog_selectedScan->setMinimumSize(QSize(0, 0));
-        Dialog_selectedScan->setStyleSheet(QString::fromUtf8("background-color: rgb(37,123,232);"));
+        Dialog_selectedScan->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 231, 255);"));
         verticalLayout_4 = new QVBoxLayout(Dialog_selectedScan);
         verticalLayout_4->setObjectName("verticalLayout_4");
         horizontalLayout_4 = new QHBoxLayout();
@@ -78,7 +78,7 @@ public:
 
         frame = new QFrame(Dialog_selectedScan);
         frame->setObjectName("frame");
-        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(244, 249, 255);\n"
 "border-radius: 10;"));
         frame->setFrameShape(QFrame::Shape::StyledPanel);
         frame->setFrameShadow(QFrame::Shadow::Raised);
